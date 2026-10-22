@@ -108,3 +108,9 @@ button {
         margin: 5px 0;
     }
 }
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
