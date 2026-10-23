@@ -1,0 +1,178 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    margin: 0;
+    padding: 30px 15px;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+#taskForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+#taskForm input {
+    flex: 1;
+    min-width: 0;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+#taskForm button {
+    background: #2563eb;
+    color: white;
+    white-space: nowrap;
+}
+
+#taskForm button:hover {
+    background: #1d4ed8;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.filter {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.filter:hover {
+    background: #cbd5e1;
+}
+
+.filter.active {
+    background: #2563eb;
+    color: white;
+}
+
+#taskCount {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.task span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task.completed span {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.complete-btn {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.complete-btn:hover {
+    background: #bbf7d0;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+.empty {
+    text-align: center;
+    color: #64748b;
+    padding: 20px 0;
+}
+
+button:focus-visible {
+    outline: 2px solid #0f172a;
+    outline-offset: 2px;
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 18px;
+    }
+
+    #taskForm {
+        flex-wrap: wrap;
+    }
+
+    #taskForm input {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .task {
+        flex-wrap: wrap;
+    }
+}
